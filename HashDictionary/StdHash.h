@@ -4,9 +4,13 @@
 
 class StdHash : public Hash
 {
+private:
+	std::hash<std::string> m_Hasher;
+
+public:
 	virtual size_t Hasher(const std::string& key) override
 	{
-		return std::hash<std::string>{}(key) % SIZE;
+		return m_Hasher(key) % SIZE;
 	}
 
 	virtual bool Find(const std::string& key) override
