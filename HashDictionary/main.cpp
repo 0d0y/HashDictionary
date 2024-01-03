@@ -66,7 +66,7 @@ int main()
 	myHash->PrintIssue();
 	stdHash->PrintIssue();
 
-	delete myHash;
+	//delete myHash;
 	delete stdHash;
 	return 0;
 }
