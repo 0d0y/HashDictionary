@@ -49,6 +49,21 @@ public:
 
 		std::cout << "Not found in My Hash table.";
 		return false;
+
+		//size_t index = Hasher(key);
+		//const auto& list = m_Bucket[index];
+
+		//for (const auto& node : list)
+		//{
+		//	if (node == key)
+		//	{
+		//		std::cout << "Found in My Hash table.";
+		//		return true;
+		//	}
+		//}
+
+		//std::cout << "Not found in My Hash table.";
+		//return false;
 	}
 
 	virtual void PrintIssue() override

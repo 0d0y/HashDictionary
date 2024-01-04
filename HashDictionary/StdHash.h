@@ -18,7 +18,7 @@ public:
 		m_Bucket.reserve(SIZE);
 		for (const auto& word : setAll)
 		{
-			m_Bucket.insert({ word, word });
+			m_Bucket.emplace( word, word );
 		}
 	}
 
@@ -57,10 +57,10 @@ public:
 		}
 
 		std::cout << "stdHash Issue" << std::endl;
-		std::cout << "데이터가 있는 버킷 수            : " << DataCount << std::endl;
-		std::cout << "데이터가 있는 버킷 / 총버킷        : " << (double)DataCount / m_Bucket.bucket_count() << '%' << std::endl;
-		std::cout << "데이터가 2개 이상인 버킷 수        : " << DataTwoOver << std::endl;
-		std::cout << "데이터가 가장 많은 버킷의 원소 갯수 : " << ChainingMax << std::endl;
-		std::cout << "2개 이상인 버킷 / 데이터가 있는 버킷 : " << (double)DataTwoOver / DataCount << '%' << std::endl << std::endl;
+		std::cout << "데이터가 있는 버킷 수			: " << DataCount << std::endl;
+		std::cout << "데이터가 있는 버킷 / 총버킷		: " << (double)DataCount / m_Bucket.bucket_count() << '%' << std::endl;
+		std::cout << "데이터가 2개 이상인 버킷 수		: " << DataTwoOver << std::endl;
+		std::cout << "데이터가 가장 많은 버킷의 원소 갯수	: " << ChainingMax << std::endl;
+		std::cout << "2개 이상인 버킷 / 데이터가 있는 버킷	: " << (double)DataTwoOver / DataCount << '%' << std::endl << std::endl;
 	}
 };
